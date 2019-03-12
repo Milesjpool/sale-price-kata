@@ -3,6 +3,10 @@
 
 ## Doing
 - Status endpoint
+  
+ > As an API consumer     
+ > I want a simple health-check endpoint at `/status`
+ > So that I know the API service is running
 
 ## To do
 - Data-dump endpoint
