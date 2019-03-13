@@ -17,3 +17,4 @@
 - Filter context (+- n rows/cols)
 - Handle resales.
 - Create UI.
+- Add docker healthcheck to Functional tests.

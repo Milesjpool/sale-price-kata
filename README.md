@@ -13,10 +13,15 @@ provide an application which serves this data in a visual manner.
 `make installTestRequirements`
 - Run tests    
 `make test`
+- Full build    
+`make build`
+- Start app (includes full build)  
+`make start`
     
 
 ## Dependencies
 - Python 2.7(.6)
+- Docker 1.9+ 
 - Python PIP   
 `sudo apt-get install python-pip`
 - Make
