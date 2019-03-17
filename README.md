@@ -1,6 +1,6 @@
 # Sale Price Kata
 
-A solution to a sale-price API kata.
+A backend solution to a sale-price API kata.
 
 Objective - given a listing of property sale prices, and their coordinates,
 provide an application which serves this data in a visual manner.
@@ -11,12 +11,18 @@ provide an application which serves this data in a visual manner.
 - Install any missing requirements (see below)
 - Install python test dependencies    
 `make installTestRequirements`
-- Run tests    
+- Run tests (unit + functional)
 `make test`
-- Full build    
+- Full build (includes full test)
 `make build`
 - Start app (includes full build)  
 `make start`
+
+## API
+- Service status available at `http://localhost:5000/status`
+- Data available at `http://localhost:5000/sale-prices`
+    - Optional query parameters:
+        - `sort-by={key}[-{asc|desc}]` e.g. `.../sale-prices?sort-by=price-asc`
     
 
 ## Dependencies

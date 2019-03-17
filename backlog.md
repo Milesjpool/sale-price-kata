@@ -3,18 +3,30 @@
 - Status endpoint
   
  > As an API consumer     
- > I want a simple health-check endpoint at `/status`
+ > I want a simple health-check endpoint at `/status`    
  > So that I know the API service is running
-
-## Doing
+---
 - Data-dump endpoint
   
  > As a front-end developer     
- > I want a structured dump of all known data
+ > I want a structured dump of all known data    
  > So that I can begin building a suitable UI
 
+>> All data available at `/sale-prices`
+---
+- Add price sort endpoint
+
+> As a property developer   
+> I want to see sorted property prices within the selected region   
+> So that I can evaluate an area's desirability
+
+>> Sorted data available at `/sale-prices?sort-by={key}`   
+>> Direction may be specified (asc/desc) e.g. `sort-by=long-desc`
+
+## Doing
+
+
 ## To do
-- Add percentile data
 - Paginate data-dump
 - Latitude filter (query vs resource)
 - Longitude filter (query vs resource)

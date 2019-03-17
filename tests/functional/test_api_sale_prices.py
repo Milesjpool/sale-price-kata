@@ -5,8 +5,8 @@ from tests.functional.api_test_state import ApiTestState
 class TestApiSalePrices(unittest.TestCase):
     __data_endpoint = "/sale-prices"
     __single_data_point = [{'id': 1, 'long': 1, 'lat': 2, 'price': 3}]
-    __three_data_points = [{'id': 1, 'long': 60, 'lat': 23, 'price': 1422640},
-                           {'id': 2, 'long': 58, 'lat': 66, 'price': 3653379},
+    __three_data_points = [{'id': 1, 'long': 60, 'lat': 23, 'price': 3653379},
+                           {'id': 2, 'long': 58, 'lat': 66, 'price': 1422640},
                            {'id': 3, 'long': 61, 'lat': 62, 'price': 5045331}]
 
 
