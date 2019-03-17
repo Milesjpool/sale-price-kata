@@ -1,13 +1,13 @@
 import unittest
-from mapi import status
+from mapi import Status
 
 
 class TestStatus(unittest.TestCase):
 
     def setUp(self):
-        self.__unit = status.Status();
+        self.__unit = Status.Status()
 
-    def test_status_returns_ok_json(self):
+    def test_status_returns_ok(self):
         expectedStatus = {'status': 'ok'}
         actualStatus = self.__unit.asDictionary();
         self.assertEqual(expectedStatus, actualStatus)

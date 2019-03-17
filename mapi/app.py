@@ -1,13 +1,25 @@
 from flask import Flask
 from flask import jsonify
-from mapi.status import Status
+
+from mapi.DataFile import DataFile
+from mapi.SalePrices import SalePrices
+from mapi.Status import Status
 
 server = Flask(__name__)
-serverStatus = Status()
+
+status = Status()
+data_file = DataFile()
+sale_prices = SalePrices(data_file)
+
 
 @server.route("/status")
-def status():
-    return jsonify(serverStatus.asDictionary())
+def _status():
+    return jsonify(status.asDictionary())
+
+
+@server.route("/sale-prices")
+def _sale_prices():
+    return jsonify(sale_prices.asDictionary())
 
 
 if __name__ == "__main__":
