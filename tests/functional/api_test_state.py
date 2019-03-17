@@ -9,11 +9,12 @@ class ApiTestState(object):
     instance_count = 0
     __host = "localhost"
     __docker_client = docker.from_env(version='auto')
-    __running_container = None
-    __response = None
-    __error = None
 
     def __init__(self, test_case):
+        self.__running_container = None
+        self.__response = None
+        self.__error = None
+
         ApiTestState.instance_count += 1
         self.__test_case = test_case
 

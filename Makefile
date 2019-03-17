@@ -47,8 +47,8 @@ build: test promoteRelease
 
 .PHONY: startCanary
 startCanary: unitTest buildCanary
-	@docker run --name $(API_NAME) --expose $(PORT) -p $(PORT):$(PORT) $(TEST_BUILD) $(START_COMMAND)
+	@docker run --rm --name $(API_NAME) --expose $(PORT) -p $(PORT):$(PORT) $(TEST_BUILD) $(START_COMMAND) $(DATA_FILE)
 
 .PHONY: start
 start: build
-	@docker run --name $(API_NAME) --expose $(PORT) -p $(PORT):$(PORT) $(RELEASE_BUILD) $(START_COMMAND)
+	@docker run --name $(API_NAME) --expose $(PORT) -p $(PORT):$(PORT) $(RELEASE_BUILD) $(START_COMMAND) $(DATA_FILE)

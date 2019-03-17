@@ -14,8 +14,8 @@
  > So that I can begin building a suitable UI
 
 ## To do
-- Paginate data-dump
 - Add percentile data
+- Paginate data-dump
 - Latitude filter (query vs resource)
 - Longitude filter (query vs resource)
 - Lat/long and/or filter (point vs cross)
@@ -23,3 +23,4 @@
 - Handle resales.
 - Create UI.
 - Add docker healthcheck to Functional tests.
+- Calculate percentiles at write-time.

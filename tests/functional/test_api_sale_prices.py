@@ -19,7 +19,6 @@ class TestApiSalePrices(unittest.TestCase):
         self.__state.then_the_response_is_okay()
         self.__state.then_the_response_payload_is(self.__single_data_point)
 
-    @unittest.skip("WIP")
     def test_retrieval_of_multiple_raw_sale_prices(self):
         self.__state.given_the_application_is_started_with("/test-data/three-data-points.txt")
         self.__state.when_I_query(self.__data_endpoint)

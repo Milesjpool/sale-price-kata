@@ -1,14 +1,20 @@
+import sys
 from flask import Flask
 from flask import jsonify
 
-from mapi.DataFile import DataFile
+from mapi.DataFile import DataFile, NullDataFile
+from mapi.FileReader import FileReader
 from mapi.SalePrices import SalePrices
 from mapi.Status import Status
 
 server = Flask(__name__)
 
 status = Status()
-data_file = DataFile()
+
+data_file = NullDataFile()
+if len(sys.argv) > 1:
+    data_file = DataFile(sys.argv[1], FileReader())
+
 sale_prices = SalePrices(data_file)
 
 
