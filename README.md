@@ -7,6 +7,8 @@ provide an application which serves this data in a visual manner.
 
 ## Features
 
+For features, existing and upcoming, see `backlog.md`
+
 ## Environment setup
 - Install any missing requirements (see below)
 - Install python test dependencies    
